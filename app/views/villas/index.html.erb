@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Which place is your next discovery?</h2>
+  <div class="form-box">
+    <%= simple_form_for(@villa) do |f| %>
+      <%= f.input :location, error: 'Please specify a location' %>
+      <%= f.input :number_of_beds, error: 'Please specify a location', label: 'Number of guests' %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

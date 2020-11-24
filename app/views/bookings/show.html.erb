@@ -1,0 +1,15 @@
+<h2><strong>Booking deatails</strong></h2>
+<br>
+<h3>Date: <%= @booking.date %></h3>
+<br>
+<h3>Description: <%= @booking.villa[:description] %></h3>
+<h3>Location: <%= @booking.villa[:location] %></h3>
+
+<h3>Bedrooms: <%= @booking.villa[:number_of_bedrooms] %></h3>
+<h3>Bathrooms: <%= @booking.villa[:number_of_bathrooms] %></h3>
+
+<h3>Total price: <%= @booking.villa[:price_per_night]* @booking.number_of_nights %>€</h3>
+
+<h3>Services provided: <%= @booking.villa[:services] %></h3>
+
+

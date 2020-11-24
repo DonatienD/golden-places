@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>New villa</h1>
+  <div class="form-box">
+    <%= simple_form_for(@villa) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :location %>
+      <%= f.input :services %>
+      <%= f.input :price_per_night %>
+      <%= f.input :number_of_bedrooms %>
+      <%= f.input :number_of_bathrooms %>
+      <%= f.input :number_of_beds, label: 'Number of guests' %>
+      <%= f.association :user, error: 'Mandatory, please specify one' %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
