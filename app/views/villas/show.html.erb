@@ -1,18 +1,30 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Lato:wght@100&display=swap" rel="stylesheet">
+
+
 <h2><strong><%= @villa.title %></strong></h2>
 
 <!-- <% @villa.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>  -->
 
-<h3>Description: <%= @villa.description %></h3>
-<h3>Location: <%= @villa.location %></h3>
+<p>Description: <%= @villa.description %></p>
+<p>Location: <%= @villa.location %></p>
 
-<h3>Bedrooms: <%= @villa.number_of_bedrooms %></h3>
-<h3>Bathrooms: <%= @villa.number_of_bathrooms %></h3>
-<h3>Max. number of guests: <%= @villa.number_of_beds %></h3>
+<p>Bedrooms: <%= @villa.number_of_bedrooms %></p>
+<p>Bathrooms: <%= @villa.number_of_bathrooms %></p>
+<p>Max. number of guests: <%= @villa.number_of_beds %></p>
 
-<h3>Price per night: <%= @villa.price_per_night %>€</h3>
+<p>Price per night: <%= @villa.price_per_night %>€</p>
 
-<h3>Services: <%= @villa.services %></h3>
+<p>Services: <%= @villa.services %></p>
+
+
+<div id="card_description">
+  <img src="#" alt="" class="avatar">
+  <p>XXXXXX </p>
+  <p>“Owner little description Owner little description Owner little description Owner little description Owner little description Owner little description Owner little description Owner little description Owner little d ”</p>
+</div>
+
 
 <%= link_to "Book this place", new_villa_booking_path(@villa) %>
