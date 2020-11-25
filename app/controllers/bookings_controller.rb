@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
   before_action :find_villa, only: [:new, :create]
+  before_action :set_user, only: [:index, :create]
   def index
-    @bookings = Booking.where(user_id: 2)
+    @bookings = Booking.where(user_id: @uid)
   end
 
   def show
@@ -14,12 +15,12 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @user = User.find(2)
+    @user = User.find(@uid)
     @booking.villa = @villa
     @booking.user = @user
     @booking.is_accepted = false
     if @booking.save
-      redirect_to villa_path(@villa)
+      redirect_to bookings_path
     else
       render :new
     end
@@ -29,6 +30,10 @@ class BookingsController < ApplicationController
 
   def find_villa
     @villa = Villa.find(params[:villa_id])
+  end
+
+  def set_user
+    @uid = User.where(email: "booking@gmail.com")[0].id
   end
 
   def booking_params
