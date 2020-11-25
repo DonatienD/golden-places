@@ -1,4 +1,8 @@
 class VillasController < ApplicationController
+  def home
+    @villa = Villa.new
+  end
+
   def new
     @villa = Villa.new
   end
@@ -14,11 +18,10 @@ class VillasController < ApplicationController
     end
   end
 
-  def index
-    @villa = Villa.new
+  def search
   end
 
-  def search
+  def search_results
   end
 
   def show
