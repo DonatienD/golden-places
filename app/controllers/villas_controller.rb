@@ -1,4 +1,10 @@
 class VillasController < ApplicationController
+
+
+    def home
+    @villa = Villa.new
+    end
+
   def new
     @villa = Villa.new
   end
@@ -12,10 +18,6 @@ class VillasController < ApplicationController
     else
       render :new
     end
-  end
-
-  def index
-    @villa = Villa.new
   end
 
   def search
