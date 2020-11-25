@@ -1,1 +1,51 @@
 // Specific CSS for your home-page
+
+/* Home Page */
+
+body {
+  background-color: #2F3740;
+}
+
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  color: #FED8AB;
+  font-size: 4em;
+}
+h2 {
+  font-family: 'Lato', sans-serif;
+  color: #FED8AB;
+  font-size: 2.5em;
+}
+p, form label {
+  font-family: 'Heebo', sans-serif;
+  color: #FED8AB;
+}
+
+
+
+/* Rectangle*/
+
+.display-flex {
+  display: flex;
+}
+.first_part {
+  background-color: #2F3740;
+  width: 85%;
+}
+.second_part {
+  background-color: #FED8AB;
+  width: 15%;
+}
+
+.content {
+  margin-top: 11em;
+}
+
+
+.img_home {
+  margin-top: 3em;
+  margin-right: 10em;
+  width: 250%;
+  float: right;
+}
