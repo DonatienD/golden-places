@@ -2,13 +2,34 @@
 
 /* Home Page */
 
-.bleu-background {
-position: relative;
-width: 1440px;
-height: 1035px;
-
-background: #2F3740;
+body {
+  background-color: #2F3740;
 }
+
+input {
+  font-family: 'Heebo', sans-serif;
+  color: #FED8AB;
+  background-color: #2F3740;
+  border:1px solid #FED8AB;
+  border-radius: 7pt;
+  padding: 5px 0px;
+}
+h1 {
+  font-family: 'Lato', sans-serif;
+  color: #FED8AB;
+  font-size: 4em;
+}
+h2 {
+  font-family: 'Lato', sans-serif;
+  color: #FED8AB;
+  font-size: 2.5em;
+}
+p {
+  font-family: 'Heebo', sans-serif;
+  color: #FED8AB;
+}
+
+
 
 
 /* Rectangle 13 */
