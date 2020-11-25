@@ -4,52 +4,34 @@
 
 
 
-<div class="container">
-   <div class="background">
-  <h2>Which place is your next discovery?</h2>
-  <div class="form-box">
-    <%= simple_form_for(@villa) do |f| %>
-      <%= f.input :location, error: 'Please specify a location' %>
-      <%= f.input :number_of_beds, error: 'Please specify a location', label: 'Number of guests' %>
-      <%= f.button :submit, class: "button" %>
-    <% end %>
-     </div>
-  </div>
-</div>
 
 
-
-
-<!--  <div class="container">
-      <div class="card-white" id="introduction">
-        <h1>Hello, I'm Boris </h1>
-        <img src="../shared/images/profile.png" class="img-circle" width="100px" alt="Boris Paillard">
-        <p>
-          I love Github, UX/UI Design, web-development and motorbikes . I launched Le Wagon to teach code to entrepreneurs and creative people around the world 🌍.
-        </p>
-        <a href="#" class="btn-blue">Discover Le Wagon</a>
-      </div>
-      <div class="card-white">
-        <h2>Follow me</h2>
-        <ul class="list-inline">
-          <li>
-            <a href="https://github.com/papillard" target="_blank">
-              <i class="fab fa-github-square"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/bpapillard" target="_blank">
-              <i class="fab fa-twitter-square"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://medium.com/@papillard" target="_blank">
-              <i class="fab fa-medium"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </body>
-</html> -->
+<body>
+    <section class="display-flex">
+        <div class="first_part">
+          <div class="container">
+            <div class="background">
+              <div class="navbar d-flex justify-content-between">
+                <%= link_to "Golden Places", root_path %>
+                <div>
+                  <%= link_to "Search", root_path %>
+                  <%= link_to "Bookings", bookings_path %>
+                </div>
+              </div>
+              <div class="content">
+                <h2>Which place is your next discovery?</h2>
+                <div id="search-villa-form">
+                  <%= simple_form_for(@villa) do |f| %>
+                  <%= f.input :location, error: 'Please specify a location' %>
+                  <%= f.input :number_of_beds, error: 'Please specify a location', label: 'Number of guests' %>
+                  <%= f.button :submit, class: "button" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="second_part">
+          <img class="img_home" src="https://s3-us-west-2.amazonaws.com/maven-user-photos/bigblendedfamily/parenting/7nKsL4HrtkaXmFAI6iZ3ww/tyuYlAHv90KmzPc-MJU3DQ" alt="">        </div>
+    </section>
+</body>

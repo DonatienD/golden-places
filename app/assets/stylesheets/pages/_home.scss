@@ -6,14 +6,7 @@ body {
   background-color: #2F3740;
 }
 
-input {
-  font-family: 'Heebo', sans-serif;
-  color: #FED8AB;
-  background-color: #2F3740;
-  border:1px solid #FED8AB;
-  border-radius: 7pt;
-  padding: 5px 0px;
-}
+
 h1 {
   font-family: 'Lato', sans-serif;
   color: #FED8AB;
@@ -24,22 +17,35 @@ h2 {
   color: #FED8AB;
   font-size: 2.5em;
 }
-p {
+p, form label {
   font-family: 'Heebo', sans-serif;
   color: #FED8AB;
 }
 
 
 
+/* Rectangle*/
 
-/* Rectangle 13 */
+.display-flex {
+  display: flex;
+}
+.first_part {
+  background-color: #2F3740;
+  width: 85%;
+}
+.second_part {
+  background-color: #FED8AB;
+  width: 15%;
+}
 
-.rectangle-verticale {
-position: absolute;
-width: 196px;
-height: 1046px;
-left: 1261px;
-top: -11px;
+.content {
+  margin-top: 11em;
+}
 
-background: #FED8AB;
+
+.img_home {
+  margin-top: 3em;
+  margin-right: 10em;
+  width: 250%;
+  float: right;
 }
