@@ -10,7 +10,7 @@
       <%= f.input :number_of_bedrooms %>
       <%= f.input :number_of_bathrooms %>
       <%= f.input :number_of_beds, label: 'Number of guests' %>
-      <%= f.association :user, error: 'Mandatory, please specify one' %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.button :submit, class: "btn btn-primary" %>
     <% end %>
   </div>
