@@ -1,5 +1,5 @@
 class VillasController < ApplicationController
-  def index
+  def home
     @villa = Villa.new
   end
 

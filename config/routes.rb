@@ -1,6 +1,6 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
   devise_for :users
-  root to: 'villas#index'
+  root to: 'villas#home'
   post '/search', to: 'villas#search'
   get '/search', to: 'villas#search_results'
   resources :villas, only: [:new, :create]
