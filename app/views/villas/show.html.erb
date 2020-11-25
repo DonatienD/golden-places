@@ -4,6 +4,9 @@
 
 <h2><strong><%= @villa.title %></strong></h2>
 
+<!-- <% @villa.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>  -->
 
 <p>Description: <%= @villa.description %></p>
 <p>Location: <%= @villa.location %></p>
