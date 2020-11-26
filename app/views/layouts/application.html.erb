@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Lato:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/715418b494.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+
     <title>GoldenPlaces</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,8 +18,7 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %> <br>
-    <%= render 'shared/flashes' %>
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>
