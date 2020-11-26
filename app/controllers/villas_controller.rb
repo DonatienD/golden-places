@@ -21,9 +21,9 @@ class VillasController < ApplicationController
   end
 
   def search
-  end
-
-  def search_results
+    @villas = Villa.search_by_location(params[:location]).select do |villa|
+        villa[:number_of_beds].to_i >= params[:guests].to_i
+      end
   end
 
   def show
