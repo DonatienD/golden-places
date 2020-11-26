@@ -1,1 +1,10 @@
 <!-- Implement search results -->
+<h2><%= "No villa corresponds to your will" if @villas == [] %></h2>
+
+<% @villas.each do |villa| %>
+  <%= link_to villa.title, villa_path(villa) %>
+  <%= villa.description %>
+  <%= villa.location %>
+  <%= villa.number_of_beds %>
+  <%= cl_image_tag villa.photos.first.key %>
+<% end %>
