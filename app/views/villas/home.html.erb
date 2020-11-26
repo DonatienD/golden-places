@@ -1,46 +1,39 @@
-
-
-
-
-
-<body>
-    <section class="display-flex">
-        <div class="first_part">
-          <div class="container">
-            <div class="background">
-              <div class="navbar d-flex justify-content-between">
-                <%= link_to "Golden Places", root_path %>
-                <div>
-                  <%= link_to "Search", root_path %>
-                  <%= link_to "Bookings", bookings_path %>
-                </div>
-              </div>
-              <div class="content">
-                <h2>Which place is your next discovery?</h2>
-                <div id="search-villa-form">
-                  <%= form_tag search_path, method: :get do %>
-                    <p>Location</p>
-                    <%= text_field_tag :location,
-                      params[:location],
-                      class: "form-control",
-                      placeholder: "San Francisco"
-                    %>
-                    <br>
-                    <p>Number of guests</p>
-                    <%= text_field_tag :guests,
-                      params[:guests],
-                      class: "form-control",
-                      placeholder: "4"
-                    %>
-                    <%= submit_tag "Search", class: "button" %>
-
-                  <% end %>
-                </div>
-              </div>
-            </div>
+<section class="display-flex">
+  <div class="first_part">
+    <div class="container">
+      <div class="background">
+        <div class="navbar d-flex justify-content-between">
+          <%= link_to "Golden Places", root_path %>
+          <div>
+            <%= link_to "Search", root_path %>
+            <%= link_to "Bookings", bookings_path %>
           </div>
         </div>
-        <div class="second_part">
-          <img class="img_home" src="https://s3-us-west-2.amazonaws.com/maven-user-photos/bigblendedfamily/parenting/7nKsL4HrtkaXmFAI6iZ3ww/tyuYlAHv90KmzPc-MJU3DQ" alt=""></div>
-    </section>
-</body>
+        <div class="content">
+          <h2>Which place is your next discovery?</h2>
+          <div id="search-villa-form">
+            <%= form_tag search_path, method: :get do %>
+              <p>Location</p>
+              <%= text_field_tag :location,
+                params[:location],
+                class: "form-control",
+                placeholder: "San Francisco"
+              %>
+              <br>
+              <p>Number of guests</p>
+              <%= text_field_tag :guests,
+                params[:guests],
+                class: "form-control",
+                placeholder: "4"
+              %>
+              <%= submit_tag "Search", class: "button" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second_part">
+    <img class="img_home" src="https://s3-us-west-2.amazonaws.com/maven-user-photos/bigblendedfamily/parenting/7nKsL4HrtkaXmFAI6iZ3ww/tyuYlAHv90KmzPc-MJU3DQ" alt="">
+  </div>
+</section>

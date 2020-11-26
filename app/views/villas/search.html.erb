@@ -1,10 +1,32 @@
 <!-- Implement search results -->
-<h2><%= "No villa corresponds to your will" if @villas == [] %></h2>
-
-<% @villas.each do |villa| %>
-  <%= link_to villa.title, villa_path(villa) %>
-  <%= villa.description %>
-  <%= villa.location %>
-  <%= villa.number_of_beds %>
-  <%= cl_image_tag villa.photos.first.key %>
+<% if @villas == []  %>
+  <h2><%= "No villa corresponds to your will"%></h2>
+<% else %>
+  <% @villas.each do |villa| %>
+    <div class="result-container">
+      <div class="result-card">
+        <div class="result-card_content">
+          <div class="result-details">
+            <div>
+              <h1>
+                <strong><%= villa.title %></strong>
+              </h1>
+            </div>
+            <hr />
+            <div id="description">
+              <h2><%= villa.description %></h2>
+            </div>
+            <div id="details">
+              <p><strong>Location:</strong> <%= villa.location %></p>
+              <p><strong>Max. number of guests:</strong> <%= villa.number_of_beds %></p>
+            </div>
+            <div class="card-button">
+              <strong><%= link_to "See more...", villa_path(villa) %></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%= cl_image_tag villa.photos.first.key %>
+    </div>
+  <% end %>
 <% end %>

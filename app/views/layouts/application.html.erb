@@ -18,7 +18,9 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% unless params[:action] == "home"  %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

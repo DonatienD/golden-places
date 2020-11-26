@@ -13,3 +13,29 @@
   text-align: center
 }
 
+.result-card {
+  position: absolute;
+  left: 0;
+  top: 5%;
+  background-color: #FED8AB;
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 55%;
+
+  .result-details {
+    padding: 2em 2em 1em 2em;
+  }
+
+  #description {
+    padding-bottom: 1em;
+  }
+
+  #details {
+    font-size: 1.1em;
+    line-height: 0.7em;
+  }
+}
+
+.result-card_content {
+  position: relative;
+}
