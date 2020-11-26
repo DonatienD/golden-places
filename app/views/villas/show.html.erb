@@ -1,19 +1,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Lato:wght@100&display=swap" rel="stylesheet">
+
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606388107/21037292705e5022ecc5e832.00033214_fb14bbeeba_1920_yv063z.jpg" class="d-block w-100" alt="...">
+      <%= cl_image_tag @villa.photos.first.key %>
     </div>
+    <% @villa.photos.drop(1).each do |photo| %>
     <div class="carousel-item">
-      <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606388475/5115787575edf93308e8ef0.05206578_08d811c1ac_1920_lczhr0.jpg" class="d-block w-100" alt="...">
+      <%= cl_image_tag photo.key %>
     </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606388477/20504520555edf9260a89ca0.93412956_c26eec85ea_1920_xnyxdn.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606388478/16183955425edf926ac25cc4.03214250_fde7ddf63d_1920_kwr2bb.jpg" class="d-block w-100" alt="...">
-    </div>
+    <% end %>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
