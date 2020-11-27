@@ -1,5 +1,3 @@
-_show.scss
-
 .text-center {
 text-align: center;
 }
@@ -10,12 +8,19 @@ color: #2F3740 !important;
 height: 18em;
 }
 
+#service > h2 {
+  margin-top: 30px;
+
+}
+
 #service p, h2, i {
   color: #2F3740;
+  vertical-align: center;
 }
 
 #service i {
   margin-right: 4em;
+  justify-content:center;
 }
 
 h2 {
@@ -28,9 +33,8 @@ h2 {
 
 #button-book-villa {
   position:absolute;
-  top: 778px;
-  z-index: 2;
-  right: 39px;
+  right: 88px;
   text-align: center;
-
+  top: 950px;
+  z-index: 2;
 }
