@@ -89,18 +89,18 @@ puts "... #{Villa.count}/1 villas created.
 "
 
 # Seed Bookings
-puts "Creating bookings..."
+# puts "Creating bookings..."
 
-booking = Booking.new(
-  date: Date.today,
-  number_of_nights: 2,
-  is_accepted: false)
-booking.user = user2
-booking.villa = villa1
-booking.save
+# booking = Booking.new(
+#   date: Date.today,
+#   number_of_nights: 2,
+#   is_accepted: false)
+# booking.user = user2
+# booking.villa = villa1
+# booking.save
 
-puts "... #{Booking.count}/2 bookings created.
-"
+# puts "... #{Booking.count}/2 bookings created.
+# "
 
 puts "######################
    Seed completed ✅
