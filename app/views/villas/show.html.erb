@@ -22,50 +22,53 @@
   </a>
 </div>
 <div class="text-center" id="villa-detail">
-  <h1><strong><%= @villa.title %></strong></h1>
+  <h1 class="mt-3"><strong><%= @villa.title %></strong></h1>
   <i id="star" class="far fa-star"></i> <i id="star" class="far fa-star"></i> <i id="star" class="far fa-star"></i> <i id="star" class="far fa-star"></i> <i id="star" class="far fa-star"></i>
-  <p> Ceci est une description </p>
+  <!-- <p> Ceci est une description </p> -->
   <p>Description: <%= @villa.description %></p>
   <p>Location: <%= @villa.location %></p>
   <p>Bedrooms: <%= @villa.number_of_bedrooms %></p>
   <p>Bathrooms: <%= @villa.number_of_bathrooms %></p>
   <p>Max. number of guests: <%= @villa.number_of_beds %></p>
-  <p>Price per night: <%= @villa.price_per_night %>€</p>
+  <p class="mb-5">Price per night: <%= @villa.price_per_night %>€</p>
 </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65079.23504493018!2d-122.41035910409124!3d37.7638408277714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20Californie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1606483946490!5m2!1sfr!2sfr" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   <%= link_to "Book this place", new_villa_booking_path(@villa), class: "button", id:"button-book-villa" %>
-<div id="service" class="text-center">
-  <h2>Services:</h2> <p><%= @villa.services %></p>
-  <i class="material-icons">flight</i>
-  <i class="material-icons">sports_tennis</i>
-  <i class="material-icons">star</i>
-  <i class="material-icons">restaurant_menu</i>
-  <i class="material-icons" style="margin-right: 0">spa</i>
+<div id="service" class="text-center d-flex align-items-center justify-content-center">
+  <div>
+    <h2 style="color: #2F3740">Services:</h2> <p><%= @villa.services %></p>
+    <i class="material-icons mt-4">flight</i>
+    <i class="material-icons mt-4">sports_tennis</i>
+    <i class="material-icons mt-4">restaurant_menu</i>
+    <i class="material-icons mt-4" style="margin-right: 0">spa</i>
+  </div>
+
 </div>
 <div class="container">
-  <h2>Reviews</h2>
+  <h2 class="mt-5 mb-5">Reviews</h2>
   <div class="flexbox">
     <div class="review">
       <div class="comments mb-4 d-flex align-items-center">
-        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404463/jack-finnigan-rriAI0nhcbc-unsplash_fq8bns.jpg" alt="" class="avatar">
-       <p class="mb-0 ml-2">dgklsg,lskg,dsf</p>
+        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404485/simon-marsault-ZNaL-IDTbZc-unsplash_hgpe3f.jpg" alt="" class="avatar">
+       <p class="mb-4 ml-3 mr-3">Je recommande cette superbe villa! Nous avons passé 3 jours tres agréables! L’accueil et la cuisine sont au top! Merci à Fatiha et Patrice.
+Les chambres sont spacieuses et propres.
+Les transferts gratuits très pratiques .
+À faire!!</p>
       </div>
       <div class="comments mb-4 d-flex align-items-center">
-        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404463/jack-finnigan-rriAI0nhcbc-unsplash_fq8bns.jpg" alt="" class="avatar">
-      <p class="mb-0 ml-2">dgklsg,lskg,dsf</p>
+        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404484/stefan-stefancik-QXevDflbl8A-unsplash_mdvbxu.jpg" alt="" class="avatar">
+      <p class="mb-4 ml-3 mr-3">Amazing contemporary property. Easily hosts 10 people in double bedrooms. Exquisite artwork was a lovely touch. We went for a long birthday weekend with friends, but I could equally see spending a family vacation in this fantastic property.</p>
       </div>
       <div class="comments mb-4 d-flex align-items-center">
-        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404463/jack-finnigan-rriAI0nhcbc-unsplash_fq8bns.jpg" alt="" class="avatar">
-      <p class="mb-0 ml-2">dgklsg,lskg,dsf</p>
+        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606473846/matt-sings-ixmVe2qr8TM-unsplash_pmbdwq.jpg" alt="" class="avatar">
+      <p class="mb-4 ml-3 mr-3">J ai été ravi de mon séjour au sein de cette magnifique villa. Elle est spacieuse, joli et bien entretenu. Le personnel est compétent et répond à nos attentes. La restauration est très bonnes et la cuisinière est très agréable. Sérénité et calme sont garantis.
+Un séjour réussi.</p>
       </div>
-      <div class="comments mb-4 d-flex align-items-center">
-        <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404463/jack-finnigan-rriAI0nhcbc-unsplash_fq8bns.jpg" alt="" class="avatar">
-      <p class="mb-0 ml-2">dgklsg,lskg,dsf</p>
-      </div>
-    </div>
+       </div>
     <div id="card_description">
       <img src="https://res.cloudinary.com/jackycloud44/image/upload/v1606404463/jack-finnigan-rriAI0nhcbc-unsplash_fq8bns.jpg" alt="" class="avatar">
-      <p>XXXXXX </p>
-      <p>“Owner little description Owner little description Owner little description Owner little description Owner little description Owner little description Owner little description Owner little description Owner little d ”</p>
+      <p> Welcome, </p>
+      <p class="mb-2">“Mijas, a villa that will amaze you ! 3 bedroom, 2 bathroom, bult 137m2, terrace 19m2, parking, storage. - 4 bedroom, 3 bathroom, bult 144m2, terrace 162m2, parking, storage, garden. Sea views, Spa, 4 pools, Putting green, Paddle tenis court, Gym, Social Room, Walking distance to beach and golf.”</p>
     </div>
   </div>
 </div>
