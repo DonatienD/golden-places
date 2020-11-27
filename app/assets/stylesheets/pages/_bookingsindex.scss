@@ -1,0 +1,24 @@
+.bookings-status-box {
+  height: 160px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  position: relative;
+
+}
+
+.bookings-status-box-content {
+  width: 80%;
+  background-color: #E5E5E5;
+  padding: 30px 40px;
+  position: absolute;
+  right: 0;
+
+  h1 {
+    color: black;
+  }
+}
+
+.past-experiences-box {
+  margin-top: 75px;
+}

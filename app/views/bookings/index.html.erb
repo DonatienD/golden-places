@@ -1,4 +1,74 @@
-<% @bookings.each do |booking| %>
-  <%= link_to booking.villa[:title], booking_path(booking) %> - <%= booking.date %>
-  <br>
-<%  end %>
+<% if @bookings == []  %>
+  <h2><%= "You have no upcoming experience. Book one !"%></h2>
+<% else %>
+  <% if @upcoming_bookings != []  %>
+    <div class="bookings-status-box">
+      <div class="bookings-status-box-content">
+        <h1><%= "Your upcoming experiences"%></h1>
+      </div>
+    </div>
+    <% @upcoming_bookings.each do |booking| %>
+      <div class="result-container">
+        <div class="result-card">
+          <div class="result-card_content">
+            <div class="result-details">
+              <div>
+                <h1>
+                  <strong><%= booking.villa[:title] %></strong>
+                </h1>
+              </div>
+              <hr />
+              <div id="description">
+                <h2><%= booking.villa[:description] %></h2>
+              </div>
+              <div id="details">
+                <p><strong>Date:</strong> <%= booking.date %></p>
+                <p><strong>Location:</strong> <%= booking.villa[:location] %></p>
+              </div>
+              <div class="card-button">
+                <strong><%= link_to "View experience details", booking_path(booking) %></strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%= cl_image_tag booking.villa.photos.first.key %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+<% if @past_bookings != []  %>
+    <div class="past-experiences-box">
+      <div class="bookings-status-box">
+        <div class="bookings-status-box-content">
+          <h1><%= "Your past experiences"%></h1>
+        </div>
+      </div>
+      <% @past_bookings.each do |booking| %>
+        <div class="result-container">
+          <div class="result-card">
+            <div class="result-card_content">
+              <div class="result-details">
+                <div>
+                  <h1>
+                    <strong><%= booking.villa[:title] %></strong>
+                  </h1>
+                </div>
+                <hr />
+                <div id="description">
+                  <h2><%= booking.villa[:description] %></h2>
+                </div>
+                <div id="details">
+                  <p><strong>Date:</strong> <%= booking.date %></p>
+                  <p><strong>Location:</strong> <%= booking.villa[:location] %></p>
+                </div>
+                <div class="card-button">
+                  <strong><%= link_to "View experience details", booking_path(booking) %></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        <%= cl_image_tag booking.villa.photos.first.key %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>

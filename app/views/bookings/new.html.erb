@@ -1,10 +1,14 @@
-<div class="container">
-  <h1>New booking</h1>
-  <div class="form-box">
-    <%= simple_form_for [@villa, @booking] do |f| %>
-      <%= f.input :date %>
-      <%= f.input :number_of_nights %>
-      <%= f.button :submit, class: "btn btn-primary" %>
-    <% end %>
+<section class="display-flex">
+  <div class="background content container">
+    <h1>New booking</h1>
+    <div class="search-villa-form">
+      <%= simple_form_for [@villa, @booking] do |f| %>
+        <div class="input-fields">
+          <%= f.input :date, class: "form-control" %>
+          <%= f.input :number_of_nights, class: "form-control" %>
+        </div>
+        <%= f.button :submit, 'Book this experience', class: "search-button" %>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>
