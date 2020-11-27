@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
   before_action :set_user, only: [:index, :create]
   def index
     @bookings = Booking.where(user_id: @uid)
+    @upcoming_bookings = @bookings.select { |booking| booking.date >= Date.today }
+    @past_bookings = @bookings.select { |booking| booking.date < Date.today }
   end
 
   def show
